@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  /* background-color: mediumslateblue; */
+  position: fixed;
+  width: 100%;
+  padding: 15px 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+.navbar.sticky {
+  /* padding:  0; */
+
+  background: crimson;
+  transition: 0.7s ease;
+}
+.navbar.sticky .logo a span {
+  color: white;
+  transition: 0.7s ease;
+}
+.max-width {
+  max-width: 1000vh;
+  padding: 0 80px;
+  margin: auto;
+}
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a {
+  font-size: 35px;
+  color: wheat;
+  font-weight: 600;
+}
+.navbar .logo a span {
+  color: crimson;
+}
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+.navbar .menu li a {
+  color: white;
+  font-size: 20px;
+  margin-left: 20px;
+}
+.navbar .menu li a:hover {
+  color: crimson;
+  /* hover effect */
+  transition: color 0.5s ease;
+}
+.navbar.sticky .menu li a:hover {
+  color: lawngreen;
+}
+
+/* menu button */
+.menu-btn {
+  color: white;
+  size: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  background: url('Images/home.jpg') no-repeat center;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  background-attachment: fixed;
+}
+.home .max-width {
+  margin: auto 0 auto 40px;
+  
+}
+.home .home-content .text-1 {
+  font-size: 30px;
+}
+.home .home-content .text-2 {
+  font-size: 70px;
+}
+.home .home-content .text-3 {
+  font-size: 30px;
+}
+.home .home-content .text-3 .occupation {
+  color: yellow;
+}
+.hireme {
+  color: white;
+  background-color: crimson;
+  border-radius: 15px;
+  width: 40%;
+  padding: 10px;
+  font-size: 20px;
+  margin: 40px 0;
+}
+.hireme:hover {
+  color: crimson;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid crimson;
+  outline: none;
+}
+
+/* About section */
+.about .title,
+.skills .title,
+.contact .title,
+.projects .title {
+  font-family: sans-serif;
+  font-size: 50px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-weight: 500;
+  margin: 40px 0;
+}
+.about .about-content,
+.skills .skills-content,
+.contact .contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.about .about-content .left {
+  width: 45%;
+}
+.about .about-content .left img {
+  width: 80%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+}
+.about .about-content .right {
+  width: 55%;
+}
+.about .about-content .right .text {
+  font-size: 30px;
+  margin: 25px 0;
+}
+.about .about-content .right .text span {
+  color: crimson;
+}
+.about .about-content .right p {
+  margin-bottom: 30px;
+}
+.about .about-content .right a {
+  border: 1px solid crimson;
+  padding: 10px;
+  margin: 40px 0;
+  color: crimson;
+  border-radius: 5px;
+}
+.about .about-content .right a:hover {
+  color: white;
+  background-color: crimson;
+  outline: none;
+}
+/* projects */
+.projects {
+  background:rgb(31, 30, 30);
+  color: white;
+  
+}
+.projects .project_title{
+    margin-top: 15vh;
+}
+
+.projects .projects-content .card {
+/* width: calc(33% - 20px); */
+display: flex;
+text-align: center;
+  
+  /* padding: 10px; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  
+ 
+  
+}
+.projects .projects-content .card .box:hover i{
+        color: white;
+}
+.projects .projects-content .card .box{
+    border: 2px solid crimson;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    cursor: pointer;   
+    background-color: rgb(44, 40, 40); 
+}
+
+.projects .projects-content .card .box i{
+    font-size: 50px;
+    color: crimson;
+}
+
+.projects .projects-content .card .text{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+
+/* skills content */
+
+.skills .skills-content .column .text {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.skills .skills-content .left {
+  width: 45%;
+}
+.skills .skills-content .right {
+  width: 40%;
+}
+.skills .skills-content .right .bars {
+  margin-bottom: 15px;
+}
+.skills .skills-content .right .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+}
+.skills .skills-content .right span {
+  font-weight: 500;
+  font-size: 20px;
+}
+.skills .skills-content .right .line {
+  height: 5px;
+  width: 100%;
+  background-color: rgb(255, 250, 250);
+  position: relative;
+  z-index: -1;
+}
+.skills .skills-content .right .line::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: crimson;
+}
+.skills-content .right .html::before {
+  width: 80%;
+}
+.skills-content .right .css::before {
+  width: 70%;
+}
+.skills-content .right .js::before {
+  width: 70%;
+}
+.skills-content .right .java::before {
+  width: 60%;
+}
+.skills-content .right .python::before {
+  width: 80%;
+}
+.skills-content .right .sql::before {
+  width: 75%;
+}
+
+/* contact */
+.contact .contact-content .left {
+  /* width: calc(50% - 30px); */
+  width: 40%;
+}
+.contact .contact-content .right {
+  /* width: calc(50% - 30px); */
+  width: 50%;
+}
+
+.contact .contact-content .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.contact .contact-content .left .icons {
+  margin: 10px 0;
+}
+.contact .contact-content .row {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.contact .contact-content .row .info {
+  margin-left: 20px;
+}
+/* .contact .right form .fields{
+    margin: 20px 0;
+} */
+
+.contact .right form .fields .field {
+  height: 50px;
+  width: 50%;
+  margin: 20px 0;
+}
+.contact .right form .field input,
+.textarea {
+  width: 100%;
+  border: 1px solid;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px 15px;
+}
+.contact .right form .button {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 100px;
+}
+.contact .right form .button button {
+  padding: 10px;
+  margin-top: 70px;
+  margin-bottom: 100px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid crimson;
+  background: transparent;
+  color: crimson;
+}
+
+/* footer */
+footer {
+  background: black;
+  color: white;
+  padding: 30px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+footer a {
+  color: crimson;
+}
+
+.contact .right form .button button:hover {
+  color: white;
+  background: crimson;
+  cursor: pointer;
+}
+/* Responsive media query */
+
+@media (max-width: 947px) {
+    .about .about-content .left img{
+        width: 80%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+    }
+    .home{
+        width: 100%;
+    }
+    .contact .contact-content .column{
+        width: 100%;
+    }
+    .contact .contact-content .right form{
+        width: 100%;
+    }
+}
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+    .home{
+        width: 100%;
+    }
+    .contact .contact-content .column{
+        width: 100%;
+    }
+}
+
+@media (max-width: 947px) {
+  .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+  .menu-btn i.active::before {
+    content: '\f00d';
+  }
+  .max-width {
+    padding: 0 30px;
+    margin-left: 0;
+  }
+
+  .navbar .menu {
+    position: fixed;
+    background: black;
+    /* to hide navbar and display bars */
+    left: -100%;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+    transition: 0.7s ease;
+  }
+  .navbar .menu.active {
+    left: 0;
+  }
+  .navbar .menu li {
+    display: block;
+  }
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 25px;
+  }
+  .home{
+      display: flex;
+      width: 100%;
+     
+  }
+  .home .home-content .text-1 {
+    font-size: 20px;
+  }
+
+  .home .home-content .text-2 {
+    font-size: 40px;
+  }
+  .home .home-content .text-3 {
+    font-size: 20px;
+  }
+  .hireme{
+      width: 60%;
+      height: 100%;
+  }
+
+  /* about */
+  .about .about-content .column{
+    width: 80%;
+    
+  }
+  .about .about-content .left{
+      display: flex;
+      justify-content: center;
+      margin: 0 auto 60px;
+  }
+  .about .about-content .right{
+      flex:100%
+  }
+  .projects .projects-content .card
+  {
+     display: grid;
+     grid-template-columns: repeat(1,1fr);
+  }
+  .skills .skills-content .column,
+  .contact .contact-content .column{
+    width: 100%;
+}
+.skills .skills-content .right .bars{
+    margin-top: 50px;
+}
+.contact .contact-content .column{
+    width: 100%;
+}
+
+}
+@media (max-width: 690px) {
+    .projects .projects-content .card{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .skills .skills-content .column{
+        width: 100%;
+    }
+    .contact .contact-content .column{
+        width: 100%;
+    }
+}
