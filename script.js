@@ -19,4 +19,10 @@ $(document).ready(function(){
         backSpeed : 60,
         loop : true 
     })
+    var typed = new Typed('.occupation-2',{
+        strings : ['Developer','Designer'],
+        typeSpeed : 100,
+        backSpeed : 60,
+        loop : true 
+    })
 })  

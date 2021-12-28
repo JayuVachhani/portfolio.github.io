@@ -6,6 +6,9 @@
   text-decoration: none;
   font-family: 'Open Sans', sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 /* Navbar */
 .navbar {
@@ -48,6 +51,7 @@
   display: inline-block;
 }
 .navbar .menu li a {
+    display: block;
   color: white;
   font-size: 20px;
   margin-left: 20px;
