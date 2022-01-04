@@ -12,15 +12,12 @@ html{
 
 /* Navbar */
 .navbar {
-  /* background-color: mediumslateblue; */
   position: fixed;
   width: 100%;
-  padding: 15px 0;
-  font-family: 'Ubuntu', sans-serif;
+  padding: 10px 0;
+  font-family: sans-serif;
 }
 .navbar.sticky {
-  /* padding:  0; */
-
   background: crimson;
   transition: 0.7s ease;
 }
@@ -40,7 +37,7 @@ html{
 }
 .navbar .logo a {
   font-size: 35px;
-  color: wheat;
+  color: white;
   font-weight: 600;
 }
 .navbar .logo a span {
@@ -70,22 +67,25 @@ html{
   color: white;
   size: 40px;
   cursor: pointer;
+  /* to hide hamburger button while full width */
   display: none;
 }
 
 /* Home Section */
 .home {
   display: flex;
-  background: url('Images/home.jpg') no-repeat center;
+  background: linear-gradient(rgba(3, 3, 3, 0.8),rgba(3, 3, 3, 0.8)),url('Images/home1.jpg') no-repeat center;
   height: 100vh;
   width: 100%;
   background-size: cover;
   color: white;
-  font-family: 'Open Sans', sans-serif;
+  font-family:  sans-serif;
   background-attachment: fixed;
+
+  
 }
 .home .max-width {
-  margin: auto 0 auto 40px;
+  margin: auto 0 auto 10px;
   
 }
 .home .home-content .text-1 {
@@ -145,7 +145,8 @@ html{
   width: 80%;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 30px;
+  border-radius: 50%;  
+  box-shadow:10px 10px 10px rgb(73, 72, 72);
 }
 .about .about-content .right {
   width: 55%;
@@ -184,12 +185,10 @@ html{
 
 .projects .projects-content .card {
 /* width: calc(33% - 20px); */
-display: flex;
-text-align: center;
-  
-  /* padding: 10px; */
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    text-align: center;  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   
  
   
@@ -362,7 +361,8 @@ footer a {
         width: 80%;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 30px;
+  border-radius: 50%;
+  box-shadow:10px 10px 10px rgb(73, 72, 72)
     }
     .home{
         width: 100%;
