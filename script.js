@@ -14,13 +14,13 @@ $(document).ready(function(){
     })
 
     var typed = new Typed('.occupation',{
-        strings : ['Developer','Designer'],
+        strings : ['Web Developer'],
         typeSpeed : 100,
         backSpeed : 60,
         loop : true 
     })
     var typed = new Typed('.occupation-2',{
-        strings : ['Developer','Designer'],
+        strings : ['Web Developer'],
         typeSpeed : 100,
         backSpeed : 60,
         loop : true 
