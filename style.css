@@ -9,6 +9,13 @@
 html{
     scroll-behavior: smooth;
 }
+h1{
+  margin-top: 20px;
+}
+h4{
+  color: crimson;
+}
+
 
 /* Navbar */
 .navbar {
@@ -84,9 +91,11 @@ html{
 
   
 }
-.home .max-width {
-  margin: auto 0 auto 10px;
-  
+
+.home .home-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .home .home-content .text-1 {
   font-size: 30px;
@@ -100,23 +109,11 @@ html{
 .home .home-content .text-3 .occupation {
   color: yellow;
 }
-.hireme {
-  color: white;
-  background-color: crimson;
-  border-radius: 15px;
-  width: 40%;
-  padding: 10px;
-  font-size: 20px;
-  margin: 40px 0;
-}
-.hireme:hover {
-  color: crimson;
-  background-color: transparent;
-  cursor: pointer;
-  border: 1px solid crimson;
-  outline: none;
-}
 
+iframe{
+  height: 100vh;
+  background-color: #fefefc;  
+}
 /* About section */
 .about .title,
 .skills .title,
@@ -131,8 +128,8 @@ html{
   margin: 40px 0;
 }
 .about .about-content,
-.skills .skills-content,
-.contact .contact-content {
+.skills .skills-content,.contact
+ {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -161,14 +158,14 @@ html{
 .about .about-content .right p {
   margin-bottom: 30px;
 }
-.about .about-content .right a {
+.about .about-content .right .w3-container button {
   border: 1px solid crimson;
   padding: 10px;
   margin: 40px 0;
   color: crimson;
   border-radius: 5px;
 }
-.about .about-content .right a:hover {
+.about .about-content .right .w3-container button:hover {
   color: white;
   background-color: crimson;
   outline: none;
@@ -218,16 +215,17 @@ html{
 
 /* skills content */
 
-.skills .skills-content .column .text {
+.skills  .text {
   font-size: 30px;
   font-weight: 500;
   margin-bottom: 20px;
+  text-align: center;
+  
 }
-.skills .skills-content .left {
-  width: 45%;
-}
-.skills .skills-content .right {
-  width: 40%;
+.skills .skills-content .right {  
+  width: 50%;
+  margin: auto;
+  justify-content: space-around;
 }
 .skills .skills-content .right .bars {
   margin-bottom: 15px;
@@ -277,29 +275,36 @@ html{
 }
 
 /* contact */
-.contact .contact-content .left {
+/* .contact .contact-content .left {
   /* width: calc(50% - 30px); */
-  width: 40%;
-}
-.contact .contact-content .right {
-  /* width: calc(50% - 30px); */
-  width: 50%;
+  /* width: 40%; */
+/* } */
+.contact .contact-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+
 .contact .contact-content .text {
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 600;
   margin-bottom: 10px;
   margin-top:10vh;
+  
 }
-.contact .contact-content .left .icons {
-  margin: 10px 0;
+.contact .contact-content .icons {
+  
+  display: flex;
+  
 }
 .contact .contact-content .row {
-  display: flex;
-  height: 50px;
+  display: flex;  
   align-items: center;
   margin-bottom: 20px;
+  
+  padding: 20px;
+  
 }
 .contact .contact-content .row .info {
   margin-left: 20px;
@@ -355,6 +360,82 @@ footer a {
   background: crimson;
   cursor: pointer;
 }
+
+/* timeline */
+.timeline {
+  position: relative;
+  /* background-color: rgb(39, 35, 35); */
+  padding: 30px;
+  width: 100%;
+  margin: 0 auto;
+  z-index: -1;
+  border-radius: 15px;  
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: crimson;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -16px;
+  background-color: crimson;
+  border: 4px solid black;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+ border: 2px solid crimson;
+  position: relative;
+  border-radius: 6px;
+  color: white;
+  flex-wrap: wrap;
+  background-color: rgb(44, 40, 40);
+}
+.experience{
+  font-size: 20px;
+}
+
+
 /* Responsive media query */
 
 @media (max-width: 947px) {
@@ -368,12 +449,54 @@ footer a {
     .home{
         width: 100%;
     }
-    .contact .contact-content .column{
-        width: 100%;
+    .contact .contact-content {
+        display: flex;
+        flex-direction: column;
     }
-    .contact .contact-content .right form{
-        width: 100%;
+    .timeline {
+      position: relative;
+      /* background-color: rgb(39, 35, 35); */
+      padding: 30px;
+      width: 100%;
+      margin: 0 auto;
+      z-index: -1;
+      border-radius: 15px;  
     }
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: crimson;
+      top: 0;
+      bottom: 0;
+      left: 10%;
+      margin-left: -3px;
+    }
+    .container {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 100%;
+    }
+    .container::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      left:0 ;
+      background-color: crimson;
+      border: 4px solid black;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .left {
+      left: 20px;
+    }
+    .right{
+      left: 20px;
+    }
+    
 }
 @media (max-width: 991px) {
     .max-width{
@@ -382,9 +505,10 @@ footer a {
     .home{
         width: 100%;
     }
-    .contact .contact-content .column{
-        width: 100%;
-    }
+    .contact .contact-content .icons {
+      display: flex;
+      flex-direction: column;
+  }
 }
 
 @media (max-width: 947px) {
@@ -468,8 +592,21 @@ footer a {
 .skills .skills-content .right .bars{
     margin-top: 50px;
 }
-.contact .contact-content .column{
-    width: 100%;
+.contact .contact-content .icons{
+  display: flex;
+  flex-direction: column;
+}
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 1px;
+  background-color: crimson;
+  border: 4px solid black;
+  top: 15px;
+  border-radius: 50%;
+  /* z-index: -1; */
 }
 
 }
@@ -481,7 +618,62 @@ footer a {
     .skills .skills-content .column{
         width: 100%;
     }
-    .contact .contact-content .column{
-        width: 100%;
-    }
+    .contact .contact-content .icons{
+      display: flex;
+      flex-direction: column;
+  }
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    left: -3%;
+  }
+
+
+
+/* Make sure all circles are at the same spot */
+  .left::after {
+    left: 0%;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: -3%;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 45vh;
+    
+    
+    
+  }
+
+
+
+/* Make sure all circles are at the same spot */
+  .left::after {
+    left: -5%;
+  }
+  .right::after{
+    left: -5%;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right,.left {
+    left: 0%;
+  }
+
 }

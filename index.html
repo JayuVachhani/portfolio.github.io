@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script
       src="https://kit.fontawesome.com/8bc2330a97.js"
       crossorigin="anonymous"
@@ -68,8 +69,19 @@
             <p>
               I love to explore great technological world around me and want to help to program a better world by coding. Highly enthusiastic for a career in python and Web Technologies. I also like to improve process by making automate solutions.
             </p>
-
-            <a href="/Resume/Jay_Resume.pdf" download="">My Resume</a>
+            
+            <div class="w3-container">
+            <button onclick="document.getElementById('id01').style.display='block'" >My Resume</button>
+            <div id="id01" class="w3-modal">
+              <div class="w3-modal-content">
+                <div class="w3-container">
+                  <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                  <iframe id="iframe" style="pointer-events: none"  src="/Resume/Jay_Resume.pdf#view=fit&toolbar=0" type="application/pdf" width="100%"  ></iframe>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
           </div>
         </div>
@@ -107,79 +119,88 @@
     <!-- Skills -->
     <section class="skills" id="skills">
       <div class="max-width">
-        <div class="title">My Skills</div>
-        <div class="skills-content">
-          <div class="column left">
-            <div class="text">
-              My creative Skills and experience
-            </div>
-            <p>
-              <ul>
-
-<li>Monitoring, triggering and support of production jobs
-  (React Js).</li>
-<li>Performing Root Cause Analysis (RCA) in various
-  system such as ServiceNow, Datadog.</li>
-<li>Gain knowledge and Hands on Experience on Python
-  and React.</li>
-<li>Created script in python to reduce manual work using
-  Python libraries such as NumPy, Pandas, openpyxl,
-  tkinter etc</li>
-  <li>Developing RESTful Web API service using Python
-Django REST framework.
-</li>
-
-              </ul>
-              
-           
-            </p>
-          </div>
-          <div class="column right">
-            <div class="bars">
-              <div class="info">
-                <span>HTML</span>
-                <span>80%</span>
+        <div class="title">My Skills and Experience</div>
+        <div class="text">
+          <div class="skills-content">     
+            <div class="column right">
+              <div class="bars">
+                <div class="info">
+                  <span>HTML</span>
+                  <span>80%</span>
+                </div>
+                <div class="line html"></div>
+  
+                <div class="info">
+                  <span>CSS</span>
+                  <span>70%</span>
+                </div>
+                <div class="line css"></div>
+  
+                <div class="info">
+                  <span>JavaScript</span>
+                  <span>70%</span>
+                </div>
+                <div class="line js"></div>
+  
+                <div class="info">
+                  <span>Python</span>
+                  <span>80%</span>
+                </div>
+                <div class="line python"></div>
+  
+                <div class="info">
+                  <span>MySQL</span>
+                  <span>75%</span>
+                </div>
+                <div class="line sql"></div>
               </div>
-              <div class="line html"></div>
-
-              <div class="info">
-                <span>CSS</span>
-                <span>70%</span>
-              </div>
-              <div class="line css"></div>
-
-              <div class="info">
-                <span>JavaScript</span>
-                <span>70%</span>
-              </div>
-              <div class="line js"></div>
-
-              <div class="info">
-                <span>Python</span>
-                <span>80%</span>
-              </div>
-              <div class="line python"></div>
-
-              <div class="info">
-                <span>MySQL</span>
-                <span>75%</span>
-              </div>
-              <div class="line sql"></div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+          My Industry experience
+        </div>          
+              <div class="timeline">
+                <div class="container left">
+                  <div class="content">
+                    <h4>November, 2020 - December, 2021</h4>
+                    <ul>
+                      <li class="experience">Monitoring, triggering and support of production jobs
+                        (React Js).</li>
+                        <li class="experience">Gain knowledge and Hands on Experience on Python
+                          and React.</li>
+                          <li class="experience">Created script in python to reduce manual work using
+                            Python libraries such as NumPy, Pandas, openpyxl,
+                            tkinter etc</li>
+                          <li class="experience">Worked on React Developmemt Project.</li>
+                    </ul>
+                    
+                  </div>
+                </div>
+                <div class="container right">
+                  <div class="content">
+                    <h4>January, 2021 - Present</h4>
+                    <ul>
+                      <li class="experience">Gain knowledge on Django rest framework and libraries.</li>
+                      <li class="experience">Developing RESTful Web API service using Python
+                        Django REST framework.</li>
+                    </ul>
+                      
+                    </ul>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
     <!-- Contact -->
     <section class="contact" id="contact">
       <div class="max-width">
         <!-- <h2 class="title">Contact Me</h2> -->
         <div class="contact-content">
-          <div class="column left">
-            <h3 class="text">
+          
+            <h1 class="text">
               Get in Touch
-            </h3><br>
+            </h1>
             <div class="icons">
               <div class="row">
                 <i class="fas fa-user"></i>
@@ -203,63 +224,16 @@ Django REST framework.
                 </div>
               </div>
             </div>
-          </div>
-          <!-- <div class="column right">
-            <div class="text">Message Me</div><br>
-            <form action="#">
-              <div class="fields">
-                <div class="field name">
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Your Name"
-                  />
-                </div>
-                <div class="field email">
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Your Email"
-                  />
-                </div>
-                <div class="field subject">
-                  <input
-                    type="text"
-                    name="subject"
-                    id="subject"
-                    placeholder="Subject"
-                  />
-                </div>
-                <div class="field message">
-                  <textarea
-                    cols="50"
-                    rows="5"
-                    placeholder="Write your message "
-                    class="textarea"
-                  ></textarea>
-                </div>
-                <div class="button">
-                  <button type="submit">Send Message</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div> -->
+          
     </section>
 
     <!-- Footer -->
     <footer>
       <div class="footer">
         Created by
-        <a href="#">Jay Vachhani</a>
-        
-        
+        <a href="#">Jay Vachhani</a>       
       </div>
     </footer>
-    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam inventore voluptatem illo est laudantium, architecto ut aliquid perspiciatis odit unde ratione similique reiciendis possimus nesciunt, autem expedita dicta, natus ipsum! Ad eius eligendi, amet saepe ut nobis hic cupiditate odit tempore non aperiam delectus laborum id ea labore quia soluta praesentium reiciendis dolorem animi autem quos dolor nemo. Quia architecto laborum non deleniti maxime autem cupiditate, quam reprehenderit sunt est vel nobis atque harum animi iure asperiores culpa aliquid inventore maiores labore officia amet similique consequuntur. Quam architecto, a quidem sunt aperiam eos, natus fuga repellendus incidunt illum voluptatum aliquid. Magni quod perspiciatis ratione eum, ipsam ipsum ab non, iusto nesciunt omnis quo libero consequuntur animi quaerat distinctio ea corrupti et dolore adipisci, similique tempore quisquam error sed? Ad laborum eaque voluptas aliquam? Expedita maiores iste praesentium sint est amet. Quam culpa quasi aliquam, nemo suscipit voluptatum ab ducimus at delectus ratione natus officiis minima quidem tenetur explicabo exercitationem voluptates corporis eum? Quam optio ullam voluptatibus laboriosam voluptatum cumque hic odio quos, magnam officiis eos natus dolorum fugit, dolores veniam. Eos tempora sit magni quas est laudantium placeat aspernatur voluptatibus! Ex delectus fugiat, ab quasi quos ratione modi alias quidem.</p> -->
     <script src="script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
@@ -268,5 +242,6 @@ Django REST framework.
           '<script src="js/vendor/jquery-1.10.2.min.js"><\/script>',
         )
     </script>
+    <script type='text/javascript' src='/js/jquery.mousewheel.min.js'></script>
   </body>
 </html>
